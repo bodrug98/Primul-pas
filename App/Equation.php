@@ -26,7 +26,11 @@ class Equation
         } else if ($delta == 0) {
             $this->x1 = $x2 = (-$this->b) / (2 * $this->a);
         } else {
-            return null;
+            $realPart = (float) (-$this->b/(2*$this->a));
+            $imaginaryPart = sqrt(-$delta)/(2*$this->a);
+
+            $this->x1 = $realPart . "+" . $imaginaryPart . "i";
+            $this->x2 = $realPart . "-" . $imaginaryPart . "i";
         }
 
         return array($this->x1, $this->x2);
