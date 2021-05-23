@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <title>Equations Solver</title>
+
+    <style>
+        input {
+            margin-right: 2px;
+            text-align: right;
+        }
+
+        .form-control {
+            width: 75px;
+            display: inline;
+        }
+
+        .container {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            margin-top: 25px;
+            border-radius: 10px;
+            -webkit-box-shadow: 2px 4px 12px 2px rgba(0,0,0,0.59); 
+            box-shadow: 2px 4px 12px 2px rgba(0,0,0,0.59);
+        }
+
+        .results {
+            padding-top: 25px;
+        }
+
+        .form {
+            font-weight: bolder;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .results-data {
+            padding-left: 25px;
+        }
+
+        .result {
+            font-size: 20px;
+            color: gray;
+        }
+
+        .result-value {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .results-error {
+            color: red; 
+            text-align: center;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        ::-webkit-input-placeholder {
+            text-align: right;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+    <script src="assets/js/formprocess.js"></script>
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <input type="number" class="form-control" name="a" placeholder="a" />x<sup>2</sup>
+            + <input type="number" class="form-control" name="b" placeholder="b" />x
+            + <input type="number" class="form-control" name="c" placeholder="c" /> = 0
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="calculateEquation()">Gaseste radacinile ecuatie</button>
+        <div class="results">
+            <h3>Results:</h3>
+            <div class="results-data">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
