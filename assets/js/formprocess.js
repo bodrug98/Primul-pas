@@ -49,6 +49,13 @@ function calculateEquation() {
     });
 }
 
+function resetForm() {
+    $('input').removeClass('is-invalid');
+    $('input').val("");
+
+    $('.results-data').empty();
+}
+
 function returnResultElement(label, value) {
     return  `<span class="result">${label} = <span class="result-value">${value}</span></span>`
 }
